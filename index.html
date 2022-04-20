@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="action-bar">
+        <span id="saveAlbum" class="material-icons">save</span>
+        <span id="addAlbum" class="material-icons">add</span>
+        <span id="removeAlbum" class="material-icons">remove</span>
+        <span id="importAlbum" class="material-icons">upload</span>
+        <span id="exportAlbum" class="material-icons">download</span>
+        <span id="playAlbum" class="material-icons"> play_circle</span>
+        <select id="selectAlbum">
+            <option value="-1">Select an album</option>
+        </select>
+        <input type="file" multiple="false" id="uploadFile">
+
+    </div>
+    <div id="content">
+        <div id="content-list">
+            <div id="new-slide">
+                New Slide
+            </div>
+            <div id="slide-list">
+
+            </div>
+        </div>
+        <div id="content-main">
+            <div id="create-slide">
+                <div>
+                    <input id="txtSlideUrl" type="text" placeholder="Image URL">
+                </div>
+                <div>
+                    <input id="txtSlideTitle" type="text" placeholder="Title">
+                </div>
+                <div>
+                    <textarea id="txtSlideDesc" name="" id="" cols="30" rows="10" placeholder="Description"></textarea>
+                </div>
+                <div>
+                    <button id="btnSaveSlide">Save Slide</button>
+                </div>
+            </div>
+            <div id="show-slide">
+                <!-- here we need to create a template yet again!! so we will append on show slide click -->
+
+            </div>
+        </div>
+        <div id="content-main-overlay">
+            <div class="content-text-overlay">Either create a new slide or select a slide</div>
+        </div>
+    </div>
+    <div id="overlay">
+        <div class="text-overlay">Please select an album</div>
+    </div>
+    <div id="play-overlay">
+        <div class="play-text-overlay">Playing the album! </div>
+    </div>
+    <template id="allTemplates">
+        <option purpose="new-album"></option>
+        <div class="slide">
+            <div class="title"></div>
+            <div class="slide-content">
+                <div class="desc"></div>
+                <img src="" />
+            </div>
+        </div>
+
+        <div class="slide-in-view">
+            <div class="slide-header">
+                <div class="title"></div>
+                <span purpose="edit" class="material-icons">edit</span>
+                <span purpose="delete" class="material-icons">delete</span>
+            </div>
+            <div class="slide-content">
+                <div class="desc"></div>
+                <img src="" />
+            </div>
+        </div>
+
+    </template>
+    <script src="script.js"></script>
+</body>
+
+</html>

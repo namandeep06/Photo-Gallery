@@ -1,0 +1,309 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#action-bar {
+    background-color: lightcoral;
+    height: 10vh;
+    display: flex;
+}
+
+#action-bar * {
+    border: 3px solid white;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+#action-bar span:hover {
+    background-color: white;
+}
+
+#action-bar select {
+    background-color: transparent;
+}
+
+#content {
+    height: 90vh;
+    display: flex;
+
+}
+#uploadFile{
+    display: none;
+}
+
+#content-list {
+    background-color: #CEAB93;
+    width: 15vw;
+    padding: 10px;
+}
+
+#content-main {
+    background-color: #FFEDDB;
+    width: 85vw;
+}
+
+#play-overlay {
+    /* display: none; */
+    position: fixed;
+    height: 90vh;
+    width: 100vw;
+    top: 10vh;
+    left: 0%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 2;
+    display: none;
+}
+
+#overlay {
+    /* display: none; */
+    position: fixed;
+    height: 90vh;
+    width: 100vw;
+    top: 10vh;
+    left: 0%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 3;
+}
+
+.text-overlay {
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* border: 1px solid white; */
+    line-height: 100%;
+    vertical-align: middle;
+    text-decoration: underline;
+}
+
+.play-text-overlay{
+    font-size: 35px;
+    color: white;
+    position: absolute;
+    top: -5%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* border: 1px solid white; */
+    line-height: 100%;
+    vertical-align: middle;
+    text-decoration: underline;
+}
+
+#new-slide {
+    background-color: white;
+    border-radius: 5px;
+    /* horizontally center */
+    text-align: center;
+    /* vertically center */
+    line-height: 100px;
+    vertical-align: middle;
+    font-weight: bold;
+    font-style: italic;
+    margin: 5px;
+}
+
+.slide {
+    background-color: white;
+    border-radius: 5px;
+    height: 100px;
+    vertical-align: middle;
+    font-weight: bold;
+    font-style: italic;
+    /* slides k beech vala gap */
+    margin: 5px;
+    width: 90%;
+}
+
+.slide:hover {
+    opacity: 0.5;
+}
+
+.slide .title {
+    height: 25%;
+    /* line below the title is coming bcoz of this */
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+.slide .slide-content {
+    height: 75%;
+    width: 100%;
+    display: flex;
+    padding: 3px;
+}
+
+.slide .slide-content .desc {
+    height: 100%;
+    width: 50%;
+    background-color: lightcoral;
+    border-radius: 5px;
+    font-size: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* gap among description and img */
+    margin: 0px 5px;
+    /* desc k andr k content pe lgegi yeh padding */
+    padding: 3px;
+}
+
+.slide .slide-content img {
+    height: 100%;
+    width: 47%;
+    border-radius: 5px;
+
+}
+
+/* slide in view styling starts */
+.slide-in-view {
+    /* background-color: white; */
+    border-radius: 5px;
+    vertical-align: middle;
+    font-weight: bold;
+    font-style: italic;
+    /* slides k beech vala gap */
+    margin: 5px;
+    width: 99%;
+    height: 89vh;
+}
+
+.slide-in-view .slide-header .title {
+    /* rest 2% width for the spans */
+    width: 98%;
+    text-align: center;
+    font-size: 40px;
+}
+
+.slide-in-view .slide-content {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    padding: 3px;
+}
+
+.slide-in-view .slide-content .desc {
+    height: 100%;
+    width: 50%;
+    background-color: #F7C5A8;
+    border-radius: 5px;
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* gap among description and img */
+    margin: 0px 10px;
+    /* desc k andr k content pe lgegi yeh padding */
+    padding: 3px;
+}
+.slide-in-view .slide-header{
+    height: 10%;
+    /* line below the title is coming bcoz of this */
+    border-bottom: 2px solid black;
+    display: flex;
+    padding-top: 7px;
+}
+.slide-in-view .slide-header span{
+    padding: 10px 5px;
+}
+.slide-in-view .slide-header span:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.slide-in-view .slide-content img {
+    height: 100%;
+    width: 47%;
+    border-radius: 5px;
+
+}
+/* slide in view styling ends */
+
+#new-slide:hover {
+    transform: scale(1.02);
+}
+
+
+#slide-list {
+    height: calc(86vh - 100px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#content-main-overlay {
+    display: none;
+    position: fixed;
+    height: 90vh;
+    width: 85vw;
+    top: 10vh;
+    right: 0%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+.content-text-overlay {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* border: 1px solid white; */
+    line-height: 100%;
+    vertical-align: middle;
+    text-decoration: underline;
+}
+
+#show-slide {
+    display: none;
+}
+
+#create-slide {
+    display: none;
+    background-color: antiquewhite;
+    padding: 8px;
+    text-align: center;
+}
+
+#create-slide input {
+    width: 70%;
+    height: 6vh;
+    font-size: 20px;
+}
+
+#create-slide textarea {
+    width: 70%;
+    height: 43vh;
+    font-size: 20px;
+}
+
+#create-slide div {
+    margin: 10px;
+    padding: 10px;
+}
+
+#create-slide button {
+    padding: 15px;
+    border-radius: 4px;
+    color: black;
+    background-color: white;
+    border: 2px solid green;
+    transition-duration: 0.4s;
+}
+
+#create-slide button:hover {
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+}
